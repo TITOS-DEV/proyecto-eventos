@@ -19,13 +19,19 @@ body {
 
 .header {
     grid-area: header;
-    background-color: #007bff;
+    background-color: #454545;
     color: white;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.header img {
+    height: 120px; 
+    width: auto; 
+    margin-right: 20px; 
 }
 
 .user-nav a {
@@ -41,12 +47,12 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 2. SIDEBAR */
 .sidebar {
     grid-area: sidebar;
-    background-color: #2c3e50;
+    background-color: #454545;
     color: white;
     padding-top: 20px;
+    box-shadow: 20px 5px 10px rgba(0, 0, 0, 1);
 }
 
 .sidebar nav ul {
@@ -65,8 +71,8 @@ body {
 
 .sidebar nav li a:hover,
 .sidebar nav li a.active {
-    background-color: #34495e;
-    border-left: 5px solid #007bff;
+    background-color: #45C3E5;
+    border-left: 5px solid #E41D66  ;
     padding-left: 15px;
 }
 
@@ -83,14 +89,4 @@ body {
     padding: 20px;
     margin-top: 15px;
     border-radius: 8px;
-}
-
-/* 4. FOOTER */
-.footer {
-    grid-area: footer;
-    background-color: #333;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 0.85em;
 }
