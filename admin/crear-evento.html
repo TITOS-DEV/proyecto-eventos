@@ -6,6 +6,7 @@
     <title>EVENTHUB | ADMINISTRADOR</title>
     <link rel="stylesheet" href="css/admin.css" />
     <link rel="shortcut icon" href="../img/logos/Gemini_Generated_Image_9bo4n19bo4n19bo4-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
     <div class="dashboard-layout">
@@ -30,7 +31,38 @@
     </aside>
 
     <main class="main-content">
+        <div class="mbody">
+            <div class="details-header">
+        <h3>Detalles del evento</h3>
+    </div>
 
+    <form class="details-form-grid" action="#" method="POST">
+        
+        <input type="text" placeholder="NOMBRE" class="input-field large-field" name="nombre_evento">
+        <input type="text" placeholder="CATEGORIA" class="input-field large-field" name="categoria">
+        <input type="text" placeholder="ESTADO" class="input-field large-field" name="estado">
+        <input type="text" placeholder="DESCRIPCIÓN" class="input-field">
+        <label class="input-field">IMAGEN DEL EVENTO
+        <input type="file" placeholder="IMAGEN DEL EVENTO" class="input-field">
+        </label>
+        <div class="right-column-fields">
+            <input type="date" placeholder="FECHA" class="input-field small-field" name="fecha">
+            <input type="text" placeholder="RESTRICCIÓN" class="input-field small-field" name="restriccion">
+            <input type="text" placeholder="UBICACION" class="input-field small-field" name="ubicacion">
+            
+            <div class="map-container">
+                
+            </div>
+        </div>
+        
+    </form>
+
+    <div class="details-actions">
+        <button type="button" class="action-button btn-discard">DESCARTAR</button>
+        <button type="button" class="action-button btn-draft">BORRADOR</button>
+        <button type="submit" class="action-button btn-publish" form="event-form">PUBLICAR</button>
+    </div>
+        </div>
     </main>
 </body>
 </html>

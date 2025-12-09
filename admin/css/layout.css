@@ -55,3 +55,151 @@
     color: #007bff; 
     margin-right: 5px;
 }
+
+
+
+.event-details-module {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 30px;
+    max-width: 800px; /* Limita el ancho del módulo para mejor visualización */
+}
+
+/* Encabezado del módulo (Barra Gris Oscura Superior) */
+.details-header {
+    background-color: #3d3d3d; /* Color similar al encabezado de la tabla */
+    color: white;
+    padding: 15px;
+}
+
+.details-header h3 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+/* Distribución principal del formulario usando CSS Grid */
+.details-form-grid {
+    display: grid;
+    /* Define 2 columnas para el diseño: una para campos largos (1.2 partes) y otra para campos cortos (1 parte) */
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+}
+
+/* Estilo Base para todos los campos (simulación de inputs grises) */
+.field-box {
+    background-color: #cccccc; /* Gris de fondo de los inputs */
+    color: #888888; /* Color de texto interno */
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    height: 20px; /* Altura estándar para simular inputs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Espacio entre elementos en la misma columna */
+}
+
+/* Campo de Descripción (más alto) */
+.description-area {
+    grid-row: 4 / span 3; /* Hace que ocupe 3 filas verticales de la primera columna */
+    height: 200px; 
+    align-items: flex-start; /* Alinea el texto en la parte superior */
+    padding-top: 15px;
+    grid-column: 1 / 2;
+}
+
+/* Contenedor de la columna derecha para los campos pequeños y el mapa */
+.right-column-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor del Mapa */
+.map-container {
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    background-color: #dddddd; /* Un gris un poco diferente para el fondo del mapa */
+}
+.map-container  {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Asegura que la imagen del mapa se ajuste */
+}
+
+/* Botones de Acción (Pie del módulo) */
+.details-actions {
+    background-color: #f0f0f0; 
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.action-button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: white;
+}
+
+
+.btn-discard {
+    background-color: #f44336; 
+}
+
+.btn-draft {
+    background-color: #4c4c4c; 
+}
+
+.btn-publish {
+    background-color: #8bc34a; 
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+.details-form-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.input-field {
+    background-color: #cccccc; 
+    color: #333; 
+    border-radius: 6px;
+    border: none; 
+    font-weight: bold;
+    font-size: 0.9em;
+    height: 20px; 
+    margin-bottom: 15px;
+    box-sizing: content-box; 
+    width: auto; 
+}
+
+
+.input-field::placeholder {
+    color: #888888; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+input[type="date"] {
+    color: #888888;
+    text-align: center;
+}

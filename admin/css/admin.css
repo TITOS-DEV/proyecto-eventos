@@ -76,17 +76,18 @@ body {
     padding-left: 15px;
 }
 
-/* 3. MAIN CONTENT */
+
 .main-content {
     grid-area: main;
     padding: 20px;
     background-color: #f9f9f9;
 }
 
-.example-box {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 8px;
+.mbody{
+    background-color: #454545;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
 }
+
+
