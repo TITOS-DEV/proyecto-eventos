@@ -1,0 +1,220 @@
+/* Nav */
+
+/* Fondo degradado para la barra de navegación principal */
+.navbar-custom {
+  background: linear-gradient(
+    90deg,
+    #f0a568 0%,
+    #e4717d 35%,
+    #c75a9f 65%,
+    #2e77c7 100%
+  );
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Estilos para el logo y el texto */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand img {
+  height: 150px;
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  text-decoration: underline;
+}
+
+/* Estilos para los elementos de la parte superior derecha */
+.top-right-elements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.btn-iniciar-sesion {
+  background-color: #343a40;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.link-contactanos {
+  color: white;
+  text-decoration: underline;
+  margin-left: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Estilos para la barra de navegación primaria */
+.primary-navbar {
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.primary-navbar .nav-link {
+  color: white !important;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+}
+
+/* Estilos para la barra de navegación secundaria (oscura) */
+.secondary-navbar {
+  background-color: #343a40;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.secondary-navbar .nav-link {
+  color: white !important;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+/* Añadir subrayado solo a los primeros enlaces */
+/* .secondary-navbar .nav-item:nth-child(1) .nav-link,
+.secondary-navbar .nav-item:nth-child(2) .nav-link {
+  text-decoration: underline;
+} */
+
+/* Estilos para la barra de búsqueda */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+}
+
+.search-btn {
+  background-color: #00a8cc;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+/* Ajustes para la responsividad en pantallas pequeñas */
+@media (max-width: 991px) {
+  .top-right-elements {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .secondary-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    padding: 1rem;
+  }
+
+  .search-form {
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    justify-content: space-between;
+  }
+}
+
+/* Footer */
+/* Estilo personalizado para recrear el color de fondo lila claro */
+.custom-footer-bg {
+  background-color: #ccccff; /* Un color lila claro similar al de la imagen */
+  color: #333; /* Color de texto oscuro para buen contraste */
+}
+
+/* Estilo para los iconos de redes sociales */
+.social-icon {
+  font-size: 1.5rem; /* Tamaño del icono */
+  width: 40px; /* Ancho del círculo */
+  height: 40px; /* Alto del círculo */
+  border-radius: 50%; /* Forma de círculo */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 5px;
+  color: white; /* Color del icono dentro del círculo */
+}
+
+/* Colores específicos de las redes sociales */
+.fa-facebook-f {
+  background-color: #3b5998;
+}
+.fa-telegram-plane {
+  background-color: #0088cc;
+}
+.fa-instagram {
+  /* Gradiente para Instagram */
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white;
+}
+.fa-whatsapp {
+  background-color: #25d366;
+}
+.fa-google {
+  background-color: #db4437;
+} /* Rojo para Gmail/Google */
+
+/* Estilo para los iconos de contacto (círculos blancos) */
+.contact-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 5px;
+  background-color: white; /* Círculo blanco */
+}
+
+/* Colores de los iconos de contacto (dentro del círculo blanco) */
+.fa-whatsapp-contact {
+  color: #25d366;
+}
+.fa-google-contact {
+  color: #db4437;
+}
