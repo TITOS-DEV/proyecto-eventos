@@ -1,30 +1,50 @@
-/* Nav */
+/* ==========================================================
+   VARIABLES (colores y tamaños reutilizables)
+   ========================================================== */
+:root {
+  --nav-height: 110px;
+  --dark: #343a40;
+  --white: #ffffff;
+  --gradient-start: #f0a568;
+  --gradient-mid1: #e4717d;
+  --gradient-mid2: #c75a9f;
+  --gradient-end: #2e77c7;
+  --footer-bg: #ccccff;
+}
 
-/* Fondo degradado para la barra de navegación principal */
+/* FIX para que el navbar no tape el HERO */
+body {
+  padding-top: var(--nav-height);
+  height: 100%;
+  margin: 0;
+}
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
 .navbar-custom {
   background: linear-gradient(
     90deg,
-    #f0a568 0%,
-    #e4717d 35%,
-    #c75a9f 65%,
-    #2e77c7 100%
+    var(--gradient-start) 0%,
+    var(--gradient-mid1) 35%,
+    var(--gradient-mid2) 65%,
+    var(--gradient-end) 100%
   );
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 0.8rem 0;
+  z-index: 1030;
 }
 
-/* Estilos para el logo y el texto */
 .navbar-brand {
   display: flex;
   align-items: center;
-  font-family: sans-serif;
-  color: white !important;
+  color: var(--white) !important;
   font-size: 1.5rem;
   font-weight: bold;
+  font-family: sans-serif;
 }
 
 .navbar-brand img {
-  height: 150px;
+  height: 80px;
   margin-right: 10px;
 }
 
@@ -32,7 +52,7 @@
   text-decoration: underline;
 }
 
-/* Estilos para los elementos de la parte superior derecha */
+/* TOP RIGHT */
 .top-right-elements {
   display: flex;
   align-items: center;
@@ -41,8 +61,8 @@
 }
 
 .btn-iniciar-sesion {
-  background-color: #343a40;
-  color: white;
+  background-color: var(--dark);
+  color: var(--white);
   border: none;
   padding: 0.5rem 1.5rem;
   font-weight: bold;
@@ -52,51 +72,47 @@
 }
 
 .link-contactanos {
-  color: white;
+  color: var(--white);
   text-decoration: underline;
   margin-left: 15px;
   font-weight: 500;
   white-space: nowrap;
 }
 
-/* Estilos para la barra de navegación primaria */
+/* PRIMARY NAVBAR */
 .primary-navbar {
   padding: 0.5rem 1rem;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 15px;
 }
+
 .primary-navbar .nav-link {
-  color: white !important;
+  color: var(--white) !important;
   font-weight: bold;
   padding: 0.5rem 1rem;
   text-decoration: underline;
 }
 
-/* Estilos para la barra de navegación secundaria (oscura) */
+/* SECONDARY NAVBAR */
 .secondary-navbar {
-  background-color: #343a40;
+  background-color: var(--dark);
   padding: 0.5rem 1rem;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .secondary-navbar .nav-link {
-  color: white !important;
+  color: var(--white) !important;
   font-weight: bold;
   padding: 0.5rem 1rem;
 }
 
-/* Añadir subrayado solo a los primeros enlaces */
-/* .secondary-navbar .nav-item:nth-child(1) .nav-link,
-.secondary-navbar .nav-item:nth-child(2) .nav-link {
-  text-decoration: underline;
-} */
-
-/* Estilos para la barra de búsqueda */
+/* SEARCH */
 .search-form {
   display: flex;
   align-items: center;
@@ -105,9 +121,8 @@
 .search-input {
   background-color: transparent;
   border: none;
-  color: white;
+  color: var(--white);
   padding: 0.5rem;
-  outline: none;
 }
 
 .search-input::placeholder {
@@ -117,7 +132,7 @@
 .search-btn {
   background-color: #00a8cc;
   border: none;
-  color: white;
+  color: var(--white);
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -127,7 +142,7 @@
   margin-left: 5px;
 }
 
-/* Ajustes para la responsividad en pantallas pequeñas */
+/* RESPONSIVIDAD NAVBAR */
 @media (max-width: 991px) {
   .top-right-elements {
     justify-content: flex-start;
@@ -139,6 +154,7 @@
     align-items: flex-start;
     border-radius: 15px;
     padding: 1rem;
+    width: 100%;
   }
 
   .search-form {
@@ -150,71 +166,56 @@
   }
 }
 
-/* Footer */
-/* Estilo personalizado para recrear el color de fondo lila claro */
+/* ==========================================================
+   MAIN + ASIDE (scroll independiente)
+   ========================================================== */
+section.mt-4 > .container-fluid > .row {
+  height: calc(100vh - var(--nav-height) - 40px);
+}
+
+main {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.sidebar-fijo {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+  max-height: calc(100vh - var(--nav-height) - 40px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
 .custom-footer-bg {
-  background-color: #ccccff; /* Un color lila claro similar al de la imagen */
-  color: #333; /* Color de texto oscuro para buen contraste */
+  background-color: var(--footer-bg);
+  color: #333;
 }
 
-/* Estilo para los iconos de redes sociales */
-.social-icon {
-  font-size: 1.5rem; /* Tamaño del icono */
-  width: 40px; /* Ancho del círculo */
-  height: 40px; /* Alto del círculo */
-  border-radius: 50%; /* Forma de círculo */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  margin: 0 5px;
-  color: white; /* Color del icono dentro del círculo */
-}
-
-/* Colores específicos de las redes sociales */
-.fa-facebook-f {
-  background-color: #3b5998;
-}
-.fa-telegram-plane {
-  background-color: #0088cc;
-}
-.fa-instagram {
-  /* Gradiente para Instagram */
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  color: white;
-}
-.fa-whatsapp {
-  background-color: #25d366;
-}
-.fa-google {
-  background-color: #db4437;
-} /* Rojo para Gmail/Google */
-
-/* Estilo para los iconos de contacto (círculos blancos) */
+.social-icon,
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   margin: 0 5px;
-  background-color: white; /* Círculo blanco */
+  text-decoration: none;
 }
 
-/* Colores de los iconos de contacto (dentro del círculo blanco) */
-.fa-whatsapp-contact {
-  color: #25d366;
+.social-icon i {
+  color: white;
 }
-.fa-google-contact {
-  color: #db4437;
+
+.contact-icon {
+  background-color: white;
+}
+
+.contact-icon i {
+  color: var(--dark);
 }
