@@ -1,0 +1,221 @@
+/* ==========================================================
+   VARIABLES (colores y tamaños reutilizables)
+   ========================================================== */
+:root {
+  --nav-height: 110px;
+  --dark: #343a40;
+  --white: #ffffff;
+  --gradient-start: #f0a568;
+  --gradient-mid1: #e4717d;
+  --gradient-mid2: #c75a9f;
+  --gradient-end: #2e77c7;
+  --footer-bg: #ccccff;
+}
+
+/* FIX para que el navbar no tape el HERO */
+body {
+  padding-top: var(--nav-height);
+  height: 100%;
+  margin: 0;
+}
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+.navbar-custom {
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start) 0%,
+    var(--gradient-mid1) 35%,
+    var(--gradient-mid2) 65%,
+    var(--gradient-end) 100%
+  );
+  padding: 0.8rem 0;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: var(--white) !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.navbar-brand img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  text-decoration: underline;
+}
+
+/* TOP RIGHT */
+.top-right-elements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.btn-iniciar-sesion {
+  background-color: var(--dark);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.link-contactanos {
+  color: var(--white);
+  text-decoration: underline;
+  margin-left: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* PRIMARY NAVBAR */
+.primary-navbar {
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.primary-navbar .nav-link {
+  color: var(--white) !important;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+}
+
+/* SECONDARY NAVBAR */
+.secondary-navbar {
+  background-color: var(--dark);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.secondary-navbar .nav-link {
+  color: var(--white) !important;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+/* SEARCH */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+}
+
+.search-btn {
+  background-color: #00a8cc;
+  border: none;
+  color: var(--white);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+/* RESPONSIVIDAD NAVBAR */
+@media (max-width: 991px) {
+  .top-right-elements {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .secondary-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .search-form {
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================
+   MAIN + ASIDE (scroll independiente)
+   ========================================================== */
+section.mt-4 > .container-fluid > .row {
+  height: calc(100vh - var(--nav-height) - 40px);
+}
+
+main {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.sidebar-fijo {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+  max-height: calc(100vh - var(--nav-height) - 40px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+.custom-footer-bg {
+  background-color: var(--footer-bg);
+  color: #333;
+}
+
+.social-icon,
+.contact-icon {
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.social-icon i {
+  color: white;
+}
+
+.contact-icon {
+  background-color: white;
+}
+
+.contact-icon i {
+  color: var(--dark);
+}
