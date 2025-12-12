@@ -219,3 +219,15 @@ main {
 .contact-icon i {
   color: var(--dark);
 }
+
+footer h3{
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+
+footer .mapa{
+  display: flex;
+justify-content: center;
+align-items: center;  
+}

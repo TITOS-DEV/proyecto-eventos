@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVENTHUB | ADMINISTRADOR</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="shortcut icon" href="../img/logos/Gemini_Generated_Image_9bo4n19bo4n19bo4-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/ajustes.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+    <header class="header">
+        <img src="../img/logos/logo.png" alt="">
+        <h1>CONFIGURACION PAGINA</h1>
+        <nav class="user-nav">
+        <a href="#">Perfil</a>
+        <a href="#">Cerrar Sesión</a>
+        </nav>
+    </header>   
+
+    <aside class="sidebar">
+        <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="crear-evento.html" >Crear evento</a></li>
+            <li><a href="lista-eventos.html">Listar evento</a></li>
+            <li><a href="ajustes-evento.html" class="active"> Ajustes</a></li>
+        </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="mbody">
+            <div class="details-header">
+        <h3>configuracion de la pagina</h3>
+    </div>
+
+    <form class="details-form-grid" action="#" method="POST">
+        <p>Nombre de la pagina: Eventos</p>
+        <input type="text" placeholder="nueva nombre de pagina" class="input-field large-field" name="nombre_evento">
+        <P>Eliminar evento: </P>
+        <input type="text" placeholder="Digite el id del evento" class="input-field large-field" name="categoria">
+        </label>
+        </div>
+        
+    </form>
+
+    <div class="details-actions">
+        <button type="button" class="action-button btn-discard">DESCARTAR</button>
+        <button type="button" class="action-button btn-draft">BORRADOR</button>
+        <button type="submit" class="action-button btn-publish" form="event-form">GUARDAR</button>
+    </div>
+        </div>
+    </main>
+</body>
+</html>
